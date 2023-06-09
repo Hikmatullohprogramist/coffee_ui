@@ -75,6 +75,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      sha256: "2ba20a47c8f1f233bed775ba2dd0d3ac97b4cf32fc17731b3dfc672b06b0e92a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.5"
   js:
     dependency: transitive
     description:
@@ -160,6 +168,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  sweet_nav_bar:
+    dependency: "direct main"
+    description:
+      name: sweet_nav_bar
+      sha256: "03eed7f4fd6aee22736328493ba66565c3c4aee380720e0e0f96b0ab37feb1ea"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
   term_glyph:
     dependency: transitive
     description:
@@ -186,3 +202,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=3.0.3 <4.0.0"
+  flutter: ">=1.17.0"
