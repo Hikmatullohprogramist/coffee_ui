@@ -2,6 +2,8 @@ import 'package:coffee_ui/screens/intro.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'screens/login/src/utils/password_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,10 +18,18 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
         useMaterial3: true,
       ),
-      home: const IntroPage(),
+      home: PasswordInputView(
+        expectedCode: '0000',
+        onSuccess: () {
+          Get.to(const IntroPage());
+
+        },
+        onError: () {
+        },
+      ),
     );
   }
 }

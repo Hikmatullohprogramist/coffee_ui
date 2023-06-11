@@ -123,7 +123,7 @@ class _MainScreenState extends State<MainScreen> {
                 height: 10,
               ),
               Container(
-                height: 120,
+                height: 121,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: categorys.length,
@@ -145,6 +145,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const Text(
                     "Promotion",
