@@ -30,7 +30,7 @@ class DialNumber extends StatelessWidget {
         child: Text(
           '$number',
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                color: Color(0xff583732),
+                color: const Color(0xff583732),
                 fontWeight: FontWeight.bold,
               ),
         ),

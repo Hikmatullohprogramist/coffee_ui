@@ -38,7 +38,7 @@ class IntroPage extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(const MainScreen());
+                  Get.to(const MainMainScreen());
                 },
                 child: Container(
                   width: 280,

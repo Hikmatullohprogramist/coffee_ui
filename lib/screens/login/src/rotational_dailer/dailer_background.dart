@@ -16,7 +16,7 @@ class RotaryDialBackgroundPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     const ringWidth = RotaryDialConstants.rotaryRingWidth;
     final paint = Paint()
-      ..color = Color.fromARGB(255, 58, 37, 32)
+      ..color = const Color.fromARGB(255, 58, 37, 32)
       ..strokeWidth = ringWidth
       ..style = PaintingStyle.stroke;
 

@@ -1,4 +1,4 @@
-import 'package:coffee_ui/screens/intro.dart';
+import 'package:coffee_ui/screens/intro_screen/intro.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

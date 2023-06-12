@@ -189,7 +189,7 @@ class _PasswordInputViewState extends State<PasswordInputView>
                 Text(
                   'Enter\npassword'.toUpperCase(),
                   style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                        color: Color(0xff583732),
+                        color: const Color(0xff583732),
                         fontWeight: FontWeight.bold,
                       ),
                 ),

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class CategoryItem extends StatefulWidget {
   final String name ;
   final String image;
-  final bool isSelected;
+  final Color bacColor;
 
-  CategoryItem({super.key, required this.name, required this.image, required this.isSelected});
+  const CategoryItem({super.key, required this.name, required this.image, required this.bacColor});
 
   @override
   State<CategoryItem> createState() => _CategoryItemState();
@@ -21,7 +21,7 @@ class _CategoryItemState extends State<CategoryItem> {
           height: 80,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: widget.isSelected ? const Color(0xff583732) : Color(0xffD9D9D9),
+            color: widget.bacColor,
           ),
           child: Center(child: Image.asset(widget.image)),
 
@@ -29,8 +29,8 @@ class _CategoryItemState extends State<CategoryItem> {
         Text(
           widget.name,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Color(0xff583732),
+          style:  TextStyle(
+            color: widget.bacColor,
             fontSize: 16,
             fontFamily: "Poppins",
             fontWeight: FontWeight.w600,
