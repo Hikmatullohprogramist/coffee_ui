@@ -1,8 +1,10 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:coffee_ui/category_model.dart';
+import 'package:coffee_ui/screens/info_screen/info.dart';
 import 'package:coffee_ui/widgets/items.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -237,77 +239,80 @@ class _MainScreenState extends State<MainScreen> {
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2),
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            width: 177,
-                            height: 191,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              gradient: const LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: [Color(0x11583732), Color(0x7c583732)],
+                        return GestureDetector(
+                          onTap: () => Get.to(InfoScreen()),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 177,
+                              height: 191,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                gradient: const LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [Color(0x11583732), Color(0x7c583732)],
+                                ),
                               ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                left: 7,
-                                right: 12,
-                                top: 11,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Center(
-                                    child: Container(
-                                      width: 54,
-                                      height: 90,
-                                      child: Image.asset(
-                                        "assets/images/expresso.png",
-                                        width: 55,
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 7,
+                                  right: 12,
+                                  top: 11,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Center(
+                                      child: Container(
+                                        width: 54,
                                         height: 90,
-                                      ),
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Creamy Latte ",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Color(0xff583732),
-                                      fontSize: 16,
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      const Text(
-                                        "Rp. 40.000",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          // color: Color(0xffd8c61c),
-                                          color: Colors.yellowAccent,
-                                          fontSize: 16,
-                                          fontFamily: "Poppins",
-                                          fontWeight: FontWeight.w600,
+                                        child: Image.asset(
+                                          "assets/images/expresso.png",
+                                          width: 55,
+                                          height: 90,
                                         ),
                                       ),
-                                      Container(
-                                          width: 27,
-                                          height: 27,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                            color: const Color(0xff531607),
+                                    ),
+                                    const Text(
+                                      "Creamy Latte ",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Color(0xff583732),
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                      children: [
+                                        const Text(
+                                          "Rp. 40.000",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            // color: Color(0xffd8c61c),
+                                            color: Colors.yellowAccent,
+                                            fontSize: 16,
+                                            fontFamily: "Poppins",
+                                            fontWeight: FontWeight.w600,
                                           ),
-                                          child: const Icon(
-                                            Icons.add_outlined,
-                                            color: Colors.white,
-                                          )),
-                                    ],
-                                  ),
-                                ],
+                                        ),
+                                        Container(
+                                            width: 27,
+                                            height: 27,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(8),
+                                              color: const Color(0xff531607),
+                                            ),
+                                            child: const Icon(
+                                              Icons.add_outlined,
+                                              color: Colors.white,
+                                            )),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
