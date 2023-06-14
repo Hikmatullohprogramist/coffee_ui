@@ -200,14 +200,10 @@ class _MainScreenState extends State<MainScreen> {
                         Positioned.fill(
                           child: Align(
                             alignment: Alignment.topRight,
-                            child: SizedBox(
+                            child: Image.asset(
+                              "assets/images/large_latte.png",
                               width: 104,
                               height: 174,
-                              child: Image.asset(
-                                "assets/images/latte.png",
-                                width: 104,
-                                height: 174,
-                              ),
                             ),
                           ),
                         ),
@@ -240,7 +236,7 @@ class _MainScreenState extends State<MainScreen> {
                               crossAxisCount: 2),
                       itemBuilder: (context, index) {
                         return GestureDetector(
-                          onTap: () => Get.to(InfoScreen()),
+                          onTap: () => Get.to(const InfoScreen()),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
@@ -251,7 +247,10 @@ class _MainScreenState extends State<MainScreen> {
                                 gradient: const LinearGradient(
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
-                                  colors: [Color(0x11583732), Color(0x7c583732)],
+                                  colors: [
+                                    Color(0x11583732),
+                                    Color(0x7c583732)
+                                  ],
                                 ),
                               ),
                               child: Padding(
@@ -284,7 +283,7 @@ class _MainScreenState extends State<MainScreen> {
                                     ),
                                     Row(
                                       mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                          MainAxisAlignment.spaceAround,
                                       children: [
                                         const Text(
                                           "Rp. 40.000",
@@ -302,7 +301,7 @@ class _MainScreenState extends State<MainScreen> {
                                             height: 27,
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                              BorderRadius.circular(8),
+                                                  BorderRadius.circular(8),
                                               color: const Color(0xff531607),
                                             ),
                                             child: const Icon(
